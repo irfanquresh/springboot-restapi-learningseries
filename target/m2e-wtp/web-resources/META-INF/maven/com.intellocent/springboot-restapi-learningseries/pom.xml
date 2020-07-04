@@ -30,16 +30,22 @@
 			<version>${springframework.version}</version>
 		</dependency>
 
-		<!-- Add Jackson for JSON converters -->
+		<!-- Spring Transactions -->
 		<dependency>
-			<groupId>com.fasterxml.jackson.core</groupId>
-			<artifactId>jackson-databind</artifactId>
-			<version>2.9.5</version>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-tx</artifactId>
+			<version>${springframework.version}</version>
+		</dependency>
+
+		<!-- Spring ORM -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-orm</artifactId>
+			<version>${springframework.version}</version>
 		</dependency>
 
 		<!-- Spring Security -->
 		<!-- spring-security-web and spring-security-config -->
-
 		<dependency>
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-web</artifactId>
@@ -59,19 +65,6 @@
 			<version>${springsecurity.version}</version>
 		</dependency>
 
-		<!-- Spring Transactions -->
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-tx</artifactId>
-			<version>${springframework.version}</version>
-		</dependency>
-
-		<!-- Spring ORM -->
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-orm</artifactId>
-			<version>${springframework.version}</version>
-		</dependency>
 
 		<!-- Hibernate Core -->
 		<dependency>
@@ -80,8 +73,21 @@
 			<version>${hibernate.version}</version>
 		</dependency>
 
-		<!-- Add MySQL and C3P0 support -->
+		<!-- Hibernate Validator -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-validator</artifactId>
+			<version>6.0.7.Final</version>
+		</dependency>
 
+		<!-- Add Jackson for JSON converters -->
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>2.9.5</version>
+		</dependency>
+
+		<!-- Add MySQL and C3P0 support -->
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
@@ -93,7 +99,6 @@
 			<artifactId>c3p0</artifactId>
 			<version>${c3po.version}</version>
 		</dependency>
-
 
 		<!-- Servlet, JSP and JSTL support -->
 		<dependency>
@@ -114,18 +119,18 @@
 			<version>1.2</version>
 		</dependency>
 
+		<!-- to compensate for java 9 not including jaxb -->
+		<dependency>
+			<groupId>javax.xml.bind</groupId>
+			<artifactId>jaxb-api</artifactId>
+			<version>2.3.0</version>
+		</dependency>
+
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>3.8.1</version>
 			<scope>test</scope>
-		</dependency>
-
-		<!-- Hibernate Validator -->
-		<dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate-validator</artifactId>
-			<version>6.0.7.Final</version>
 		</dependency>
 
 	</dependencies>
